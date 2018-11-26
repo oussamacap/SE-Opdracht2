@@ -14,7 +14,7 @@ public class Kassa {
     public Kassa(double bedrag) {
         this.bedrag = bedrag;
         this.winkelwagen = new ArrayList<>();
-        ;
+
     }
 
     public List<Product> getWinkelwagen() {
@@ -47,7 +47,7 @@ public class Kassa {
 
     public void getAllProductenOfWinkelwagen() {
         for (Product product : winkelwagen) {
-            out.println(product.getNaam() + " Prijs: " + product.getPrijs() + " Aantal: " + product.getAantal());
+            out.println(product.getNaam() + " Prijs: " + product.getPrijs());
         }
     }
 

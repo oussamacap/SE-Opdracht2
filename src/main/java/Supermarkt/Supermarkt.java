@@ -36,8 +36,9 @@ public class Supermarkt {
     }
 
     public void getAllProducten() {
-        for (Product product : producten) {
-            System.out.println(product.getNaam()+" Prijs: "+ product.getPrijs()+" Aantal: "+product.getAantal());
+        for (int i = 0; i < producten.size(); i++) {
+            Product product = producten.get(i);
+            System.out.println("Productnummer "+i+" "+product.getNaam() + " Prijs: " + product.getPrijs());
         }
     }
 }
