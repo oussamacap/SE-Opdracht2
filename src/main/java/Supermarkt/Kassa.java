@@ -14,7 +14,6 @@ public class Kassa {
     public Kassa(double bedrag) {
         this.bedrag = bedrag;
         this.winkelwagen = new ArrayList<>();
-
     }
 
     public List<Product> getWinkelwagen() {
@@ -54,11 +53,11 @@ public class Kassa {
     // Afreken
     public void Betaling(Klant klant) {
         double OverBudget = klant.getBudget() + Korting() - bedrag;
-        if (OverBudget < 0){
+        if (OverBudget <= 0){
             System.out.println("Beste "+klant.getNaam()+" uw bent helaas over uw budget gegaan");
             System.out.println("Verwijder producten om uw betaling te kunnen voltooien");
         } else {
-            System.out.println(OverBudget);
+            System.out.println("Uw wisselgeld "+OverBudget);
         }
     }
 
